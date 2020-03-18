@@ -1,0 +1,1547 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{747E49C1-9628-4B9E-B31F-B1B416188DA2}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>IS21DotNet.Reports</RootNamespace>
+    <AssemblyName>IS21DotNet.Reports</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <PlatformTarget>x86</PlatformTarget>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <PlatformTarget>x86</PlatformTarget>
+    <OutputPath>bin\x86\Release\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Debug\IS21DotNet.Reports.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Release\IS21DotNet.Reports.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+    <CodeAnalysisFailOnMissingRules>false</CodeAnalysisFailOnMissingRules>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Printing.v12.1.Core, Version=12.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Data.v12.1, Version=12.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Office.v12.1.Core, Version=12.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.RichEdit.v12.1.Core, Version=12.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v12.1, Version=12.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Charts.v12.1.Core, Version=12.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Xpo.v12.1, Version=12.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraBars.v12.1, Version=12.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v12.1, Version=12.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v12.1.Design, Version=12.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v12.1.Extensions, Version=12.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v12.1.UI, Version=12.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v12.1.Web, Version=12.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v12.1.Web.Design, Version=12.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v12.1, Version=12.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPrinting.v12.1, Version=12.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPrinting.v12.1.Design, Version=12.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.PivotGrid.v12.1.Core, Version=12.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPivotGrid.v12.1, Version=12.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraReports.v12.1, Version=12.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraReports.v12.1.Design, Version=12.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Reports.v12.1.Designer, Version=12.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraReports.v12.1.Extensions, Version=12.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Xpf.Printing.v12.1.Service, Version=12.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraReports.v12.1.Service, Version=12.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraReports.v12.1.Web, Version=12.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraRichEdit.v12.1, Version=12.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="Elmah">
+      <HintPath>..\packages\elmah.corelibrary.1.2.2\lib\Elmah.dll</HintPath>
+    </Reference>
+    <Reference Include="ICSharpCode.SharpZipLib, Version=0.86.0.518, Culture=neutral, PublicKeyToken=1b03e6acf1164f73, processorArchitecture=MSIL">
+      <HintPath>..\packages\NPOI.2.1.3.1\lib\net40\ICSharpCode.SharpZipLib.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Logging, Version=5.0.414.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.ReportViewer.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="NPOI, Version=2.1.3.1, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\NPOI.2.1.3.1\lib\net40\NPOI.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="NPOI.OOXML, Version=2.1.3.1, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\NPOI.2.1.3.1\lib\net40\NPOI.OOXML.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="NPOI.OpenXml4Net, Version=2.1.3.1, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\NPOI.2.1.3.1\lib\net40\NPOI.OpenXml4Net.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="NPOI.OpenXmlFormats, Version=2.1.3.1, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\NPOI.2.1.3.1\lib\net40\NPOI.OpenXmlFormats.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Configuration.Install" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Alert\DifferentCashCountAlert.cs" />
+    <Compile Include="Alert\DifferentSalesinCRMPOSAlert.cs" />
+    <Compile Include="Alert\DownloadAlert.cs" />
+    <Compile Include="Alert\EmailAlert.cs" />
+    <Compile Include="Alert\PeopleCountAlert.cs" />
+    <Compile Include="Alert\POSCRMMonitorAlert.cs" />
+    <Compile Include="Alert\UploadAlert.cs" />
+    <Compile Include="BaseReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MMS\MMSRP118Report.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MMS\MMSRP118Report.Designer.cs">
+      <DependentUpon>MMSRP118Report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MMS\MMSRP114Report.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MMS\MMSRP114Report.Designer.cs">
+      <DependentUpon>MMSRP114Report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MMS\MMSRP104Report.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MMS\MMSRP104Report.Designer.cs">
+      <DependentUpon>MMSRP104Report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MMS\MMSRP104\Rpt104Data.cs" />
+    <Compile Include="MMS\MMSRP109Report.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MMS\MMSRP109Report.Designer.cs">
+      <DependentUpon>MMSRP109Report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MMS\MMSRP109\Rpt109Data.cs" />
+    <Compile Include="MMS\MMSRP110Report.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MMS\MMSRP110Report.Designer.cs">
+      <DependentUpon>MMSRP110Report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MMS\MMSRP110\Rpt110Data.cs" />
+    <Compile Include="MMS\MMSRP111Report.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MMS\MMSRP111Report.Designer.cs">
+      <DependentUpon>MMSRP111Report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MMS\MMSRP111\Rpt111Data.cs" />
+    <Compile Include="MMS\MMSRP113Report.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MMS\MMSRP113Report.designer.cs">
+      <DependentUpon>MMSRP113Report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MMS\MMSRP113\Rpt113Data.cs" />
+    <Compile Include="MMS\MMSRP114\Rpt114Data.cs" />
+    <Compile Include="MMS\MMSRP115Report.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MMS\MMSRP115Report.Designer.cs">
+      <DependentUpon>MMSRP115Report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MMS\MMSRP115\Rpt115Data.cs" />
+    <Compile Include="MMS\MMSRP118\Rpt118Data.cs" />
+    <Compile Include="MMS\MMSRP59LBReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MMS\MMSRP59LBReport.designer.cs">
+      <DependentUpon>MMSRP59LBReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MMS\MMSRP59LB\MMSRP59LBDetailReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MMS\MMSRP59LB\MMSRP59LBDetailReport.designer.cs">
+      <DependentUpon>MMSRP59LBDetailReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MMS\MMSRP59LB\Rpt59LBData.cs" />
+    <Compile Include="MMS\MMSRP74V2Report.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MMS\MMSRP74V2Report.Designer.cs">
+      <DependentUpon>MMSRP74V2Report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MMS\MMSRP74V2\Rpt74v2Data.cs" />
+    <Compile Include="MMS\MMSRP87Report.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MMS\MMSRP87Report.Designer.cs">
+      <DependentUpon>MMSRP87Report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MMS\MMSRP87\Rpt87Data.cs" />
+    <Compile Include="MMS\MMSRP89Report.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MMS\MMSRP89Report.Designer.cs">
+      <DependentUpon>MMSRP89Report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MMS\MMSRP89\Rpt89Data.cs" />
+    <Compile Include="MMS\MMSRP88\Rpt88Data.cs" />
+    <Compile Include="MMS\MMSRP88Report.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MMS\MMSRP88Report.Designer.cs">
+      <DependentUpon>MMSRP88Report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MMS\MMSRP70AReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MMS\MMSRP70AReport.designer.cs">
+      <DependentUpon>MMSRP70AReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MMS\MMSRP59\MMSRP59DetailReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MMS\MMSRP59\MMSRP59DetailReport.Designer.cs">
+      <DependentUpon>MMSRP59DetailReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MMS\MMSUT03LV\Rpt03LVData.cs" />
+    <Compile Include="MMS\MMSUT03LVReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MMS\MMSUT03LVReport.Designer.cs">
+      <DependentUpon>MMSUT03LVReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MMS\MMSRP86Report.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MMS\MMSRP86Report.Designer.cs">
+      <DependentUpon>MMSRP86Report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MMS\MMSRP86\Rpt86Data.cs" />
+    <Compile Include="MMS\MMSRP85\Rpt85Data.cs" />
+    <Compile Include="MMS\MMSRP85Report.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MMS\MMSRP85Report.Designer.cs">
+      <DependentUpon>MMSRP85Report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MMS\MMSRP75BReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MMS\MMSRP75BReport.Designer.cs">
+      <DependentUpon>MMSRP75BReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MMS\MMSRP67\Rpt67Data.cs" />
+    <Compile Include="MMS\MMSRP71AReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MMS\MMSRP71AReport.Designer.cs">
+      <DependentUpon>MMSRP71AReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MMS\MMSRP65AReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MMS\MMSRP65AReport.Designer.cs">
+      <DependentUpon>MMSRP65AReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MMS\MMSRP75AReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MMS\MMSRP75AReport.Designer.cs">
+      <DependentUpon>MMSRP75AReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MMS\MMSRP77BReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MMS\MMSRP77BReport.designer.cs">
+      <DependentUpon>MMSRP77BReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MMS\MMSRP84Report.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MMS\MMSRP84Report.Designer.cs">
+      <DependentUpon>MMSRP84Report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MMS\MMSRP84\Rpt84Data.cs" />
+    <Compile Include="MMS\MMSUT03\Rpt03Data.cs" />
+    <Compile Include="MMS\MMSUT03Report.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MMS\MMSUT03Report.Designer.cs">
+      <DependentUpon>MMSUT03Report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MMS\MMSRP61Report.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MMS\MMSRP61Report.Designer.cs">
+      <DependentUpon>MMSRP61Report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MMS\MMSRP61\Rpt61Data.cs" />
+    <Compile Include="MMS\MMSRP64AReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MMS\MMSRP64AReport.designer.cs">
+      <DependentUpon>MMSRP64AReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MMS\MMSRP64\Rpt64Data.cs" />
+    <Compile Include="MMS\MMSRP64Report.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MMS\MMSRP64Report.designer.cs">
+      <DependentUpon>MMSRP64Report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MMS\MMSRP65\Rpt65Data.cs" />
+    <Compile Include="MMS\MMSRP65Report.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MMS\MMSRP65Report.Designer.cs">
+      <DependentUpon>MMSRP65Report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MMS\MMSRP73\Rpt73Data.cs" />
+    <Compile Include="MMS\MMSRP73Report.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MMS\MMSRP73Report.Designer.cs">
+      <DependentUpon>MMSRP73Report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MMS\MMSRP60\Rpt60Data.cs" />
+    <Compile Include="MMS\MMSRP60Report.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MMS\MMSRP60Report.Designer.cs">
+      <DependentUpon>MMSRP60Report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MMS\MMSRP77CReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MMS\MMSRP77CReport.Designer.cs">
+      <DependentUpon>MMSRP77CReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MMS\MMSRP77AReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MMS\MMSRP77AReport.Designer.cs">
+      <DependentUpon>MMSRP77AReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MMS\MMSRP74Report.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MMS\MMSRP74Report.designer.cs">
+      <DependentUpon>MMSRP74Report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MMS\MMSRP74\Rpt74Data.cs" />
+    <Compile Include="MMS\MMSRP75Report.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MMS\MMSRP75Report.Designer.cs">
+      <DependentUpon>MMSRP75Report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MMS\MMSRP72Report.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MMS\MMSRP72Report.Designer.cs">
+      <DependentUpon>MMSRP72Report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MMS\MMSRP72\Rpt72Data.cs" />
+    <Compile Include="MMS\MMSRP75\Rpt75Data.cs" />
+    <Compile Include="MMS\MMSRP77Report.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MMS\MMSRP77Report.Designer.cs">
+      <DependentUpon>MMSRP77Report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MMS\MMSRP71Report.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MMS\MMSRP71Report.Designer.cs">
+      <DependentUpon>MMSRP71Report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MMS\MMSRP67Report.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MMS\MMSRP67Report.Designer.cs">
+      <DependentUpon>MMSRP67Report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MMS\MMSRP66Report.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MMS\MMSRP66Report.Designer.cs">
+      <DependentUpon>MMSRP66Report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MMS\MMSRP66\Rpt66Data.cs" />
+    <Compile Include="MMS\MMSRP71\Rpt71Data.cs" />
+    <Compile Include="MMS\MMSRP76Report.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MMS\MMSRP76Report.Designer.cs">
+      <DependentUpon>MMSRP76Report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MMS\MMSRP50BReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MMS\MMSRP50BReport.Designer.cs">
+      <DependentUpon>MMSRP50BReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MMS\MMSRP50B\Rpt50BData.cs" />
+    <Compile Include="MMS\MMSRP50Report.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MMS\MMSRP50Report.Designer.cs">
+      <DependentUpon>MMSRP50Report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MMS\MMSRP50\Rpt50Data.cs" />
+    <Compile Include="MMS\MMSRP51Report.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MMS\MMSRP51Report.Designer.cs">
+      <DependentUpon>MMSRP51Report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MMS\MMSRP51\MMSRP51Summary.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MMS\MMSRP51\MMSRP51Summary.Designer.cs">
+      <DependentUpon>MMSRP51Summary.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MMS\MMSRP51\Rpt51Data.cs" />
+    <Compile Include="MMS\CRMBaseDataModel.cs" />
+    <Compile Include="MMS\MMSRP59Report.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MMS\MMSRP59Report.Designer.cs">
+      <DependentUpon>MMSRP59Report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MMS\MMSRP59\Rpt59Data.cs" />
+    <Compile Include="MMS\MMSRP70Report.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MMS\MMSRP70Report.designer.cs">
+      <DependentUpon>MMSRP70Report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MMS\MMSRP76\Rpt76Data.cs" />
+    <Compile Include="MMS\MMSRP77\Rpt77Data.cs" />
+    <Compile Include="MMS\MMSRP79Report.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MMS\MMSRP79Report.designer.cs">
+      <DependentUpon>MMSRP79Report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MMS\MMSRP79\Rpt79Data.cs" />
+    <Compile Include="MMS\MMSUT22Data.cs" />
+    <Compile Include="ParameterPopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ParameterPopup.Designer.cs">
+      <DependentUpon>ParameterPopup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="POS\POSRP928Data.cs" />
+    <Compile Include="POS\POSRP934Data.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="ReportingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportingForm.Designer.cs">
+      <DependentUpon>ReportingForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Shared\BaseAlertData.cs" />
+    <Compile Include="Shared\BaseReportData.cs" />
+    <Compile Include="Shared\CommonSet.cs" />
+    <Compile Include="Shared\MasterData.cs" />
+    <Compile Include="SIT\SITRP09XLSData.cs" />
+    <Compile Include="SIT\SITRP117Report.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SIT\SITRP117Report.Designer.cs">
+      <DependentUpon>SITRP117Report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SIT\SITRP117\Rpt117Data.cs" />
+    <Compile Include="SIT\SITRP118Data.cs" />
+    <Compile Include="SIT\SITRP119Data.cs" />
+    <Compile Include="SIT\SITRP132Data.cs" />
+    <Compile Include="SIT\SITRP130Data.cs" />
+    <Compile Include="SIT\SITRP125Data.cs" />
+    <Compile Include="SIT\SITRP123Data.cs" />
+    <Compile Include="SIT\SITRP122Data.cs" />
+    <Compile Include="SIT\SITRP124Data.cs" />
+    <Compile Include="SIT\SITRP121Data.cs" />
+    <Compile Include="SIT\SITRP120Data.cs" />
+    <Compile Include="SIT\SITFM33Report.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SIT\SITFM33Report.Designer.cs">
+      <DependentUpon>SITFM33Report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SIT\SITFM33\Rpt33Data.cs" />
+    <Compile Include="SIT\SITRP01PLReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SIT\SITRP01PLReport.Designer.cs">
+      <DependentUpon>SITRP01PLReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SIT\SITRP01XLSReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SIT\SITRP01XLSReport.Designer.cs">
+      <DependentUpon>SITRP01XLSReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SIT\SITRP02Report.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SIT\SITRP02Report.Designer.cs">
+      <DependentUpon>SITRP02Report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SIT\SITRP04Report.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SIT\SITRP04Report.Designer.cs">
+      <DependentUpon>SITRP04Report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SIT\SITRP09XLSReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SIT\SITRP09XLSReport.Designer.cs">
+      <DependentUpon>SITRP09XLSReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SIT\SITRP09XLS\Rpt09XLSData.cs" />
+    <Compile Include="SIT\SITRP101Report.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SIT\SITRP101Report.designer.cs">
+      <DependentUpon>SITRP101Report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SIT\SITRP101\Rpt101Data.cs" />
+    <Compile Include="SIT\SITRP102Report.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SIT\SITRP102Report.Designer.cs">
+      <DependentUpon>SITRP102Report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SIT\SITRP102\Rpt102Data.cs" />
+    <Compile Include="SIT\SITRP103Report.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SIT\SITRP103Report.Designer.cs">
+      <DependentUpon>SITRP103Report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SIT\SITRP103\Rpt103Data.cs" />
+    <Compile Include="SIT\SITRP107Report.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SIT\SITRP107Report.Designer.cs">
+      <DependentUpon>SITRP107Report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SIT\SITRP107\Rpt107Data.cs" />
+    <Compile Include="SIT\SITRP108Report.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SIT\SITRP108Report.Designer.cs">
+      <DependentUpon>SITRP108Report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SIT\SITRP108\Rpt108Data.cs" />
+    <Compile Include="SIT\SITRP109Report.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SIT\SITRP109Report.Designer.cs">
+      <DependentUpon>SITRP109Report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SIT\SITRP109\Rpt109Data.cs" />
+    <Compile Include="SIT\SITRP110Report.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SIT\SITRP110Report.Designer.cs">
+      <DependentUpon>SITRP110Report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SIT\SITRP110\Rpt110Data.cs" />
+    <Compile Include="SIT\SITRP111Report.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SIT\SITRP111Report.Designer.cs">
+      <DependentUpon>SITRP111Report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SIT\SITRP111\Rpt111Data.cs" />
+    <Compile Include="SIT\SITRP112Report.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SIT\SITRP112Report.Designer.cs">
+      <DependentUpon>SITRP112Report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SIT\SITRP112\Rpt112Data.cs" />
+    <Compile Include="SIT\SITRP113Report..cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SIT\SITRP113Report..Designer.cs">
+      <DependentUpon>SITRP113Report..cs</DependentUpon>
+    </Compile>
+    <Compile Include="SIT\SITRP113\Rpt113Data.cs" />
+    <Compile Include="SIT\SITRP114Report.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SIT\SITRP114Report.Designer.cs">
+      <DependentUpon>SITRP114Report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SIT\SITRP114\Rpt114Data.cs" />
+    <Compile Include="SIT\SITRP115Report.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SIT\SITRP115Report.Designer.cs">
+      <DependentUpon>SITRP115Report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SIT\SITRP115\Rpt115Data.cs" />
+    <Compile Include="SIT\SITRP116Report.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SIT\SITRP116Report.Designer.cs">
+      <DependentUpon>SITRP116Report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SIT\SITRP116\Rpt116Data.cs" />
+    <Compile Include="SIT\SITRP119Report.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SIT\SITRP119Report.Designer.cs">
+      <DependentUpon>SITRP119Report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SIT\SITRP119\Rpt119Data.cs" />
+    <Compile Include="SIT\SITRP118Report.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SIT\SITRP118Report.Designer.cs">
+      <DependentUpon>SITRP118Report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SIT\SITRP118\Rpt118Data.cs" />
+    <Compile Include="SIT\SITRP126Data.cs" />
+    <Compile Include="SIT\SITRP129Data.cs" />
+    <Compile Include="SIT\SITRP127Data.cs" />
+    <Compile Include="SIT\SITRP128Report.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SIT\SITRP128Report.Designer.cs">
+      <DependentUpon>SITRP128Report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SIT\SITRP128\Rpt128Data.cs" />
+    <Compile Include="SIT\SITRP131Data.cs" />
+    <Compile Include="SIT\SITRP73\SITRP73Data.cs" />
+    <Compile Include="SIT\SITRP73Report.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SIT\SITRP73Report.Designer.cs">
+      <DependentUpon>SITRP73Report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SIT\SITRP69\SITRP69Data.cs" />
+    <Compile Include="SIT\SITRP69Report.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SIT\SITRP69Report.Designer.cs">
+      <DependentUpon>SITRP69Report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SIT\SITRP68\SITRP68Data.cs" />
+    <Compile Include="SIT\SITRP68Report.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SIT\SITRP68Report.Designer.cs">
+      <DependentUpon>SITRP68Report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SIT\SITRP67\SITRP67Data.cs" />
+    <Compile Include="SIT\SITRP67Report.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SIT\SITRP67Report.Designer.cs">
+      <DependentUpon>SITRP67Report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SIT\SITRP66\Rpt66Data.cs" />
+    <Compile Include="SIT\SITRP66Report.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SIT\SITRP66Report.Designer.cs">
+      <DependentUpon>SITRP66Report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SIT\SITRP65Report.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SIT\SITRP65Report.Designer.cs">
+      <DependentUpon>SITRP65Report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SIT\SITRP55Report.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SIT\SITRP55Report.Designer.cs">
+      <DependentUpon>SITRP55Report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SIT\SITRP25Report.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SIT\SITRP25Report.Designer.cs">
+      <DependentUpon>SITRP25Report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SIT\SITRP21CTReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SIT\SITRP21CTReport.Designer.cs">
+      <DependentUpon>SITRP21CTReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SIT\SITRP07Report.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SIT\SITRP07Report.Designer.cs">
+      <DependentUpon>SITRP07Report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SIT\SITBaseDataModel.cs" />
+    <Compile Include="SIT\SITRP01Report.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SIT\SITRP01Report.Designer.cs">
+      <DependentUpon>SITRP01Report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SIT\SITRP01Report_Detail.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SIT\SITRP01Report_Detail.Designer.cs">
+      <DependentUpon>SITRP01Report_Detail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SIT\SITRP01Report_SubReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SIT\SITRP01Report_SubReport.Designer.cs">
+      <DependentUpon>SITRP01Report_SubReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SIT\SITRP02\SITRP02Summary.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SIT\SITRP02\SITRP02Summary.Designer.cs">
+      <DependentUpon>SITRP02Summary.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SIT\SITRP02\SITRP02Activities.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SIT\SITRP02\SITRP02Activities.Designer.cs">
+      <DependentUpon>SITRP02Activities.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SIT\SITRP02\SITRP02Nature.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SIT\SITRP02\SITRP02Nature.Designer.cs">
+      <DependentUpon>SITRP02Nature.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SIT\SITRP02\SITRP02Tender.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SIT\SITRP02\SITRP02Tender.designer.cs">
+      <DependentUpon>SITRP02Tender.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SIT\SITRP02\Rpt02Data.cs" />
+    <Compile Include="SIT\SITRP03Report.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SIT\SITRP03Report.Designer.cs">
+      <DependentUpon>SITRP03Report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SIT\SITRP03\Rpt03Data.cs" />
+    <Compile Include="SIT\SITRP04\Rpt04Data.cs" />
+    <Compile Include="SIT\SITRP07\Rpt07Data.cs" />
+    <Compile Include="SIT\SITRP09\SITRP09Summary.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SIT\SITRP09\SITRP09Summary.Designer.cs">
+      <DependentUpon>SITRP09Summary.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SIT\SITRP09\SITRP09TenderReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SIT\SITRP09\SITRP09TenderReport.Designer.cs">
+      <DependentUpon>SITRP09TenderReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SIT\SITRP09\SITRP09RemarkReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SIT\SITRP09\SITRP09RemarkReport.Designer.cs">
+      <DependentUpon>SITRP09RemarkReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SIT\SITRP09\Rpt09Data.cs" />
+    <Compile Include="SIT\SITRP09Report.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SIT\SITRP09Report.Designer.cs">
+      <DependentUpon>SITRP09Report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SIT\SITRP21CT\Rpt21CTData.cs" />
+    <Compile Include="SIT\SITRP21CT\SITRP21CTSummary.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SIT\SITRP21CT\SITRP21CTSummary.Designer.cs">
+      <DependentUpon>SITRP21CTSummary.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SIT\SITRP25\Rpt25Data.cs" />
+    <Compile Include="SIT\SITRP55\Rpt55Data.cs" />
+    <Compile Include="SIT\SITRP65\Rpt65Data.cs" />
+    <Compile Include="SIT\SITRP81Report.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SIT\SITRP81Report.Designer.cs">
+      <DependentUpon>SITRP81Report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SIT\SITRP81\Rpt81Data.cs" />
+    <Compile Include="SIT\SITRP81\SITRP81Ba.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SIT\SITRP81\SITRP81Ba.Designer.cs">
+      <DependentUpon>SITRP81Ba.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SIT\SITRP81\SITRP81Sales.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SIT\SITRP81\SITRP81Sales.Designer.cs">
+      <DependentUpon>SITRP81Sales.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SIT\SITRP82Report.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SIT\SITRP82Report.Designer.cs">
+      <DependentUpon>SITRP82Report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SIT\SITRP82\Rpt82Data.cs" />
+    <Compile Include="SIT\SITRP83Report.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SIT\SITRP83Report.Designer.cs">
+      <DependentUpon>SITRP83Report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SIT\SITRP83\Rpt83Data.cs" />
+    <Compile Include="SIT\SITRP83\SITRP83Sales.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SIT\SITRP83\SITRP83Sales.Designer.cs">
+      <DependentUpon>SITRP83Sales.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SIT\SITRP84Report.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SIT\SITRP84Report.Designer.cs">
+      <DependentUpon>SITRP84Report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SIT\SITRP84\Rpt84Data.cs" />
+    <Compile Include="SIT\SITRP88Report.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SIT\SITRP88Report.Designer.cs">
+      <DependentUpon>SITRP88Report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SIT\SITRP88\SITRP88Data.cs" />
+    <Compile Include="SIT\SITRP95Report.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SIT\SITRP95Report.Designer.cs">
+      <DependentUpon>SITRP95Report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SIT\SITRP95TWJRReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SIT\SITRP95TWJRReport.Designer.cs">
+      <DependentUpon>SITRP95TWJRReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SIT\SITRP95TWJR\Rpt95TWJRData.cs" />
+    <Compile Include="SIT\SITRP95TWJR\SITRP95TWJRDetail.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SIT\SITRP95TWJR\SITRP95TWJRDetail.Designer.cs">
+      <DependentUpon>SITRP95TWJRDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SIT\SITRP95TWJR\SITRP95TWJRSummary.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SIT\SITRP95TWJR\SITRP95TWJRSummary.Designer.cs">
+      <DependentUpon>SITRP95TWJRSummary.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SIT\SITRP95\Rpt95Data.cs" />
+    <Compile Include="SIT\SITRP95\SITRP95Detail.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SIT\SITRP95\SITRP95Detail.Designer.cs">
+      <DependentUpon>SITRP95Detail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SIT\SITRP95\SITRP95Summary.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SIT\SITRP95\SITRP95Summary.Designer.cs">
+      <DependentUpon>SITRP95Summary.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SIT\SITRP98Report.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SIT\SITRP98Report.Designer.cs">
+      <DependentUpon>SITRP98Report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SIT\SITRP98\Rpt98Data.cs" />
+    <Compile Include="SIT\SITSA02Report.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SIT\SITSA02Report.Designer.cs">
+      <DependentUpon>SITSA02Report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SIT\SITSA02\Rptsa02Data.cs" />
+    <Compile Include="SIT\SITSA03Report.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SIT\SITSA03Report.Designer.cs">
+      <DependentUpon>SITSA03Report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SIT\SITSA03\Rptsa03Data.cs" />
+    <Compile Include="SIT\SITSA04Report.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SIT\SITSA04Report.Designer.cs">
+      <DependentUpon>SITSA04Report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SIT\SITSA04\SITSA04Data.cs" />
+    <Compile Include="SIT\SITSA04\SITSA04Summary.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SIT\SITSA04\SITSA04Summary.Designer.cs">
+      <DependentUpon>SITSA04Summary.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SIT\SITSA07Report.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SIT\SITSA07Report.Designer.cs">
+      <DependentUpon>SITSA07Report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SIT\SITSA07\Rptsa07Data.cs" />
+    <Compile Include="SIT\SITSA08Report.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SIT\SITSA08Report.Designer.cs">
+      <DependentUpon>SITSA08Report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SIT\SITSA08\SITSA08Data.cs" />
+    <Compile Include="SIT\SITSA09Report.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SIT\SITSA09Report.Designer.cs">
+      <DependentUpon>SITSA09Report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SIT\SITSA09\SITSA09Data.cs" />
+    <Compile Include="SIT\SITSA10Report.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SIT\SITSA10Report.Designer.cs">
+      <DependentUpon>SITSA10Report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SIT\SITSA10\SITSA10Data.cs" />
+    <Compile Include="SIT\SITSA10\SITSA10Summary.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SIT\SITSA10\SITSA10Summary.Designer.cs">
+      <DependentUpon>SITSA10Summary.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SIT\SITSA11Report.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SIT\SITSA11Report.Designer.cs">
+      <DependentUpon>SITSA11Report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SIT\SITSA11\SITSA11Data.cs" />
+    <Compile Include="SIT\SITSA11\SITSA11Summary.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SIT\SITSA11\SITSA11Summary.Designer.cs">
+      <DependentUpon>SITSA11Summary.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SIT\SITSA13\SITSA13Summary.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SIT\SITSA13\SITSA13Summary.Designer.cs">
+      <DependentUpon>SITSA13Summary.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SIT\SITSA12Report.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SIT\SITSA12Report.Designer.cs">
+      <DependentUpon>SITSA12Report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SIT\SITSA12\SITSA12Data.cs" />
+    <Compile Include="SIT\SITSA13Report.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SIT\SITSA13Report.Designer.cs">
+      <DependentUpon>SITSA13Report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SIT\SITSA13\SITSA13Data.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="BaseReport.resx">
+      <DependentUpon>BaseReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MMS\MMSRP114Report.resx">
+      <DependentUpon>MMSRP114Report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MMS\MMSRP104Report.resx">
+      <DependentUpon>MMSRP104Report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MMS\MMSRP109Report.resx">
+      <DependentUpon>MMSRP109Report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MMS\MMSRP110Report.resx">
+      <DependentUpon>MMSRP110Report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MMS\MMSRP111Report.resx">
+      <DependentUpon>MMSRP111Report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MMS\MMSRP113Report.resx">
+      <DependentUpon>MMSRP113Report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MMS\MMSRP115Report.resx">
+      <DependentUpon>MMSRP115Report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MMS\MMSRP118Report.resx">
+      <DependentUpon>MMSRP118Report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MMS\MMSRP59LBReport.resx">
+      <DependentUpon>MMSRP59LBReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MMS\MMSRP59LB\MMSRP59LBDetailReport.resx">
+      <DependentUpon>MMSRP59LBDetailReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MMS\MMSRP74V2Report.resx">
+      <DependentUpon>MMSRP74V2Report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MMS\MMSRP87Report.resx">
+      <DependentUpon>MMSRP87Report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MMS\MMSRP89Report.resx">
+      <DependentUpon>MMSRP89Report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MMS\MMSRP88Report.resx">
+      <DependentUpon>MMSRP88Report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MMS\MMSRP70AReport.resx">
+      <DependentUpon>MMSRP70AReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MMS\MMSRP59\MMSRP59DetailReport.resx">
+      <DependentUpon>MMSRP59DetailReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MMS\MMSUT03LVReport.resx">
+      <DependentUpon>MMSUT03LVReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MMS\MMSRP86Report.resx">
+      <DependentUpon>MMSRP86Report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MMS\MMSRP85Report.resx">
+      <DependentUpon>MMSRP85Report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MMS\MMSRP75BReport.resx">
+      <DependentUpon>MMSRP75BReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MMS\MMSRP71AReport.resx">
+      <DependentUpon>MMSRP71AReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MMS\MMSRP65AReport.resx">
+      <DependentUpon>MMSRP65AReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MMS\MMSRP75AReport.resx">
+      <DependentUpon>MMSRP75AReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MMS\MMSRP77BReport.resx">
+      <DependentUpon>MMSRP77BReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MMS\MMSRP84Report.resx">
+      <DependentUpon>MMSRP84Report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MMS\MMSUT03Report.resx">
+      <DependentUpon>MMSUT03Report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MMS\MMSRP61Report.resx">
+      <DependentUpon>MMSRP61Report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MMS\MMSRP64AReport.resx">
+      <DependentUpon>MMSRP64AReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MMS\MMSRP64Report.resx">
+      <DependentUpon>MMSRP64Report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MMS\MMSRP65Report.resx">
+      <DependentUpon>MMSRP65Report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MMS\MMSRP73Report.resx">
+      <DependentUpon>MMSRP73Report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MMS\MMSRP60Report.resx">
+      <DependentUpon>MMSRP60Report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MMS\MMSRP77CReport.resx">
+      <DependentUpon>MMSRP77CReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MMS\MMSRP77AReport.resx">
+      <DependentUpon>MMSRP77AReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MMS\MMSRP74Report.resx">
+      <DependentUpon>MMSRP74Report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MMS\MMSRP75Report.resx">
+      <DependentUpon>MMSRP75Report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MMS\MMSRP72Report.resx">
+      <DependentUpon>MMSRP72Report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MMS\MMSRP77Report.resx">
+      <DependentUpon>MMSRP77Report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MMS\MMSRP71Report.resx">
+      <DependentUpon>MMSRP71Report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MMS\MMSRP67Report.resx">
+      <DependentUpon>MMSRP67Report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MMS\MMSRP66Report.resx">
+      <DependentUpon>MMSRP66Report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MMS\MMSRP76Report.resx">
+      <DependentUpon>MMSRP76Report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MMS\MMSRP50BReport.resx">
+      <DependentUpon>MMSRP50BReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MMS\MMSRP50Report.resx">
+      <DependentUpon>MMSRP50Report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MMS\MMSRP51Report.resx">
+      <DependentUpon>MMSRP51Report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MMS\MMSRP51\MMSRP51Summary.resx">
+      <DependentUpon>MMSRP51Summary.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MMS\MMSRP59Report.resx">
+      <DependentUpon>MMSRP59Report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MMS\MMSRP70Report.resx">
+      <DependentUpon>MMSRP70Report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MMS\MMSRP79Report.resx">
+      <DependentUpon>MMSRP79Report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ParameterPopup.resx">
+      <DependentUpon>ParameterPopup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="ReportingForm.resx">
+      <DependentUpon>ReportingForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SIT\SITFM33Report.resx">
+      <DependentUpon>SITFM33Report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SIT\SITRP01PLReport.resx">
+      <DependentUpon>SITRP01PLReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SIT\SITRP01XLSReport.resx">
+      <DependentUpon>SITRP01XLSReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SIT\SITRP02Report.resx">
+      <DependentUpon>SITRP02Report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SIT\SITRP04Report.resx">
+      <DependentUpon>SITRP04Report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SIT\SITRP09XLSReport.resx">
+      <DependentUpon>SITRP09XLSReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SIT\SITRP101Report.resx">
+      <DependentUpon>SITRP101Report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SIT\SITRP102Report.resx">
+      <DependentUpon>SITRP102Report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SIT\SITRP103Report.resx">
+      <DependentUpon>SITRP103Report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SIT\SITRP107Report.resx">
+      <DependentUpon>SITRP107Report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SIT\SITRP108Report.resx">
+      <DependentUpon>SITRP108Report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SIT\SITRP109Report.resx">
+      <DependentUpon>SITRP109Report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SIT\SITRP110Report.resx">
+      <DependentUpon>SITRP110Report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SIT\SITRP111Report.resx">
+      <DependentUpon>SITRP111Report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SIT\SITRP112Report.resx">
+      <DependentUpon>SITRP112Report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SIT\SITRP113Report..resx">
+      <DependentUpon>SITRP113Report..cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SIT\SITRP114Report.resx">
+      <DependentUpon>SITRP114Report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SIT\SITRP115Report.resx">
+      <DependentUpon>SITRP115Report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SIT\SITRP116Report.resx">
+      <DependentUpon>SITRP116Report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SIT\SITRP117Report.resx">
+      <DependentUpon>SITRP117Report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SIT\SITRP119Report.resx">
+      <DependentUpon>SITRP119Report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SIT\SITRP118Report.resx">
+      <DependentUpon>SITRP118Report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SIT\SITRP128Report.resx">
+      <DependentUpon>SITRP128Report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SIT\SITRP73Report.resx">
+      <DependentUpon>SITRP73Report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SIT\SITRP69Report.resx">
+      <DependentUpon>SITRP69Report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SIT\SITRP68Report.resx">
+      <DependentUpon>SITRP68Report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SIT\SITRP67Report.resx">
+      <DependentUpon>SITRP67Report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SIT\SITRP66Report.resx">
+      <DependentUpon>SITRP66Report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SIT\SITRP65Report.resx">
+      <DependentUpon>SITRP65Report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SIT\SITRP55Report.resx">
+      <DependentUpon>SITRP55Report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SIT\SITRP25Report.resx">
+      <DependentUpon>SITRP25Report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SIT\SITRP21CTReport.resx">
+      <DependentUpon>SITRP21CTReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SIT\SITRP07Report.resx">
+      <DependentUpon>SITRP07Report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SIT\SITRP01Report.resx">
+      <DependentUpon>SITRP01Report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SIT\SITRP01Report_Detail.resx">
+      <DependentUpon>SITRP01Report_Detail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SIT\SITRP01Report_SubReport.resx">
+      <DependentUpon>SITRP01Report_SubReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SIT\SITRP02\SITRP02Activities.resx">
+      <DependentUpon>SITRP02Activities.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SIT\SITRP02\SITRP02Summary.resx">
+      <DependentUpon>SITRP02Summary.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SIT\SITRP02\SITRP02Nature.resx">
+      <DependentUpon>SITRP02Nature.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SIT\SITRP02\SITRP02Tender.resx">
+      <DependentUpon>SITRP02Tender.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SIT\SITRP03Report.resx">
+      <DependentUpon>SITRP03Report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SIT\SITRP09\SITRP09Summary.resx">
+      <DependentUpon>SITRP09Summary.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SIT\SITRP09\SITRP09TenderReport.resx">
+      <DependentUpon>SITRP09TenderReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SIT\SITRP09\SITRP09RemarkReport.resx">
+      <DependentUpon>SITRP09RemarkReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SIT\SITRP09Report.resx">
+      <DependentUpon>SITRP09Report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SIT\SITRP21CT\SITRP21CTSummary.resx">
+      <DependentUpon>SITRP21CTSummary.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SIT\SITRP81Report.resx">
+      <DependentUpon>SITRP81Report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SIT\SITRP81\SITRP81Ba.resx">
+      <DependentUpon>SITRP81Ba.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SIT\SITRP81\SITRP81Sales.resx">
+      <DependentUpon>SITRP81Sales.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SIT\SITRP82Report.resx">
+      <DependentUpon>SITRP82Report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SIT\SITRP83Report.resx">
+      <DependentUpon>SITRP83Report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SIT\SITRP83\SITRP83Sales.resx">
+      <DependentUpon>SITRP83Sales.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SIT\SITRP84Report.resx">
+      <DependentUpon>SITRP84Report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SIT\SITRP88Report.resx">
+      <DependentUpon>SITRP88Report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SIT\SITRP95Report.resx">
+      <DependentUpon>SITRP95Report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SIT\SITRP95TWJRReport.resx">
+      <DependentUpon>SITRP95TWJRReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SIT\SITRP95TWJR\SITRP95TWJRDetail.resx">
+      <DependentUpon>SITRP95TWJRDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SIT\SITRP95TWJR\SITRP95TWJRSummary.resx">
+      <DependentUpon>SITRP95TWJRSummary.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SIT\SITRP95\SITRP95Detail.resx">
+      <DependentUpon>SITRP95Detail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SIT\SITRP95\SITRP95Summary.resx">
+      <DependentUpon>SITRP95Summary.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SIT\SITRP98Report.resx">
+      <DependentUpon>SITRP98Report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SIT\SITSA02Report.resx">
+      <DependentUpon>SITSA02Report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SIT\SITSA03Report.resx">
+      <DependentUpon>SITSA03Report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SIT\SITSA04Report.resx">
+      <DependentUpon>SITSA04Report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SIT\SITSA04\SITSA04Summary.resx">
+      <DependentUpon>SITSA04Summary.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SIT\SITSA07Report.resx">
+      <DependentUpon>SITSA07Report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SIT\SITSA08Report.resx">
+      <DependentUpon>SITSA08Report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SIT\SITSA09Report.resx">
+      <DependentUpon>SITSA09Report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SIT\SITSA10Report.resx">
+      <DependentUpon>SITSA10Report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SIT\SITSA10\SITSA10Summary.resx">
+      <DependentUpon>SITSA10Summary.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SIT\SITSA11Report.resx">
+      <DependentUpon>SITSA11Report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SIT\SITSA11\SITSA11Summary.resx">
+      <DependentUpon>SITSA11Summary.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SIT\SITSA12Report.resx">
+      <DependentUpon>SITSA12Report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SIT\SITSA13Report.resx">
+      <DependentUpon>SITSA13Report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SIT\SITSA13\SITSA13Summary.resx">
+      <DependentUpon>SITSA13Summary.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DataModels\DataModels.csproj">
+      <Project>{BDF4F1E2-6452-4452-986C-33BB74ABFFCB}</Project>
+      <Name>DataModels</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DataUtilities\DataUtilities.csproj">
+      <Project>{9DC54733-AAFD-4704-96CD-001CC39BC41D}</Project>
+      <Name>DataUtilities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SIT\SIT.csproj">
+      <Project>{f178bbdd-9bf6-42bd-9a75-637e8567270b}</Project>
+      <Name>SIT</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Utilities\Utilities.csproj">
+      <Project>{9D007373-106B-4A4D-9890-DFD39275574B}</Project>
+      <Name>Utilities</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\" />
+    <Folder Include="CRM\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="ClassDiagram1.cd" />
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\IS21DotNet.DataModels.rptjobmst.datasource" />
+    <None Include="Properties\DataSources\IS21DotNet.DataModels.rptjobpam.datasource" />
+    <None Include="Properties\DataSources\IS21DotNet.Reports.MMS.MMSRP110.Rpt110Data.datasource" />
+    <None Include="Properties\DataSources\IS21DotNet.Reports.MMS.MMSRP114.Rpt114Data.datasource" />
+    <None Include="Properties\DataSources\IS21DotNet.Reports.MMS.MMSRP115.Rpt115Data.datasource" />
+    <None Include="Properties\DataSources\IS21DotNet.Reports.MMS.MMSRP59.Rpt59DetailData.datasource" />
+    <None Include="Properties\DataSources\IS21DotNet.Reports.MMS.MMSRP67.Rpt67Data.datasource" />
+    <None Include="Properties\DataSources\IS21DotNet.Reports.MMS.MMSRP70AResult.datasource" />
+    <None Include="Properties\DataSources\IS21DotNet.Reports.MMS.MMSRP70Result.datasource" />
+    <None Include="Properties\DataSources\IS21DotNet.Reports.MMS.MMSRP84.Rpt84Data.datasource" />
+    <None Include="Properties\DataSources\IS21DotNet.Reports.MMS.MMSRP85.Rpt85Data.datasource" />
+    <None Include="Properties\DataSources\IS21DotNet.Reports.MMS.MMSRP86.Rpt86Data.datasource" />
+    <None Include="Properties\DataSources\IS21DotNet.Reports.MMS.MMSRP87.Rpt87_1Data.datasource" />
+    <None Include="Properties\DataSources\IS21DotNet.Reports.MMS.MMSRP87.Rpt87_2Data.datasource" />
+    <None Include="Properties\DataSources\IS21DotNet.Reports.MMS.MMSRP87.Rpt87_3Data.datasource" />
+    <None Include="Properties\DataSources\IS21DotNet.Reports.MMS.MMSRP87.Rpt87_4Data.datasource" />
+    <None Include="Properties\DataSources\IS21DotNet.Reports.MMS.MMSRP88.Rpt88Data.datasource" />
+    <None Include="Properties\DataSources\IS21DotNet.Reports.MMS.MMSRP89.Rpt89Data.datasource" />
+    <None Include="Properties\DataSources\IS21DotNet.Reports.MMS.MMSUT03LV.Rpt03LVData.datasource" />
+    <None Include="Properties\DataSources\IS21DotNet.Reports.SIT.SITFM33.Rpt33Data.datasource" />
+    <None Include="Properties\DataSources\IS21DotNet.Reports.SIT.SITRP09XLS.Rpt09XLSData.datasource" />
+    <None Include="Properties\DataSources\IS21DotNet.Reports.SIT.SITRP110.Rpt110Data.datasource" />
+    <None Include="Properties\DataSources\IS21DotNet.Reports.SIT.SITRP112.Rpt112Data.datasource" />
+    <None Include="Properties\DataSources\IS21DotNet.Reports.SIT.SITRP116.Rpt116Data.datasource" />
+    <None Include="Properties\DataSources\IS21DotNet.Reports.SIT.SITRP119.Rpt119Data.datasource" />
+    <None Include="Properties\DataSources\IS21DotNet.Reports.SIT.SITRP118.Rpt118Data.datasource" />
+    <None Include="Properties\DataSources\IS21DotNet.Reports.SIT.SITRP55.Rpt55Data.datasource" />
+    <None Include="Properties\DataSources\IS21DotNet.Reports.SIT.SITRP55.Rpt55Data1.datasource" />
+    <None Include="Properties\DataSources\IS21DotNet.Reports.SIT.SITRP67.Rpt67Data.datasource" />
+    <None Include="Properties\DataSources\IS21DotNet.Reports.SIT.SITRP68.Rpt68Data.datasource" />
+    <None Include="Properties\DataSources\IS21DotNet.Reports.SIT.SITRP69.Rpt69Data.datasource" />
+    <None Include="Properties\DataSources\IS21DotNet.Reports.SIT.SITRP73.Rpt73Data.datasource" />
+    <None Include="Properties\DataSources\IS21DotNet.Reports.SIT.SITRP82.Rpt82Data.datasource" />
+    <None Include="Properties\DataSources\IS21DotNet.Reports.SIT.SITRP88.SITRP88Data.datasource" />
+    <None Include="Properties\DataSources\IS21DotNet.Reports.SIT.SITSA04.SITSA04SummaryData.datasource" />
+    <None Include="Properties\DataSources\IS21DotNet.Reports.SIT.SITSA13.SITSA13Data.datasource" />
+    <None Include="Properties\DataSources\IS21DotNet.Reports.SIT.SITSA13.SITSA13SummaryData.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>PublicSettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Readme\Elmah.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(SolutionDir)\.nuget\nuget.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
